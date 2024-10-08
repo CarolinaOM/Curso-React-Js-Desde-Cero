@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Welcomen(props) {
     const [counter, setCounter] = useState(0);
     const [semaforo, setSemafoto] = useState(false);
     const { message, name } = props;
+
+    useEffect(()=> {
+        console.log(semaforo);
+    },[semaforo])
 
     const contar = () =>{
         setCounter(counter+1);
